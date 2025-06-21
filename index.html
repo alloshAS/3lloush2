@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>مرجع عناصر HTML وخصائص CSS وميزات JavaScript</title>
+  <title>CodeSpark - مرجع HTML | CSS | JavaScript</title>
   <style>
     :root {
       --bg: #f4f7fa;
@@ -15,23 +15,49 @@
       --text: #333;
       --code-bg: #f1f6ff;
       --shadow: rgba(0, 0, 0, 0.05);
+      --accent: #2b2e4a;
+      --subtext: #888;
     }
 
     body {
       background: var(--bg);
       margin: 0;
-      padding: 2rem;
+      padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: var(--text);
     }
 
-    h1 {
-      text-align: center;
-      color: var(--text);
-      margin-bottom: 2rem;
+    #topBar {
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    #logo {
+      width: 50px;
+      height: 50px;
+      background-color: #ccc;
+      border-radius: 8px;
+      /* ضع صورتك هنا */
+      /* background-image: url('logo.png'); */
+      background-size: cover;
+    }
+    #branding {
+      text-align: right;
+    }
+    #branding h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: var(--accent);
+    }
+    #branding p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--subtext);
     }
 
-    /* شريط التنقل العلوي */
     #navBar {
       display: flex;
       justify-content: center;
@@ -59,30 +85,11 @@
       font-weight: 900;
     }
 
-    /* زر الإغلاق الثابت */
-    #closeBtn {
-      position: fixed;
-      top: 1rem;
-      left: 1rem;
-      background: #333;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      display: none; /* يظهر فقط عند اختيار لغة */
-      z-index: 1000;
-    }
-    #closeBtn:hover {
-      background: #555;
-    }
-
-    /* حاوية البطاقات */
     .container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1.5rem;
+      padding: 1rem 2rem;
     }
 
     .card {
@@ -144,22 +151,20 @@
       padding: 0.8rem;
       font-size: 1rem;
       width: 100%;
-      max-width: 400px;
+      max-width: 300px;
       border: 1px solid #ccc;
       border-radius: 8px;
       direction: ltr;
     }
 
-    /* أزرار التنقل السفلي */
     #bottomNav {
-      margin-top: 2rem;
+      margin: 2rem;
       display: flex;
       justify-content: center;
       gap: 1rem;
       font-weight: bold;
       user-select: none;
     }
-
     #bottomNav button {
       padding: 0.5rem 1.2rem;
       border-radius: 8px;
@@ -169,60 +174,54 @@
       font-size: 1rem;
       transition: background-color 0.3s ease;
     }
-
     #bottomNav button:hover {
       background-color: var(--shadow);
     }
-
   </style>
 </head>
 <body>
-  <h1>مرجع شامل لعناصر HTML وخصائص CSS وميزات JavaScript</h1>
+  <div id="topBar">
+    <div id="logo"><!-- هنا يمكن وضع شعار الموقع --></div>
+    <div id="branding">
+      <h1>CodeSpark</h1>
+      <p>تعلّم HTML | CSS | JavaScript بسهولة</p>
+    </div>
+  </div>
 
-  <!-- شريط التنقل -->
   <div id="navBar">
     <button data-type="html">HTML</button>
     <button data-type="css">CSS</button>
     <button data-type="js">JavaScript</button>
   </div>
 
-  <button id="closeBtn" title="رجوع">× إغلاق</button>
-
   <input type="text" id="searchBox" placeholder="🔍 ابحث عن أي خاصية أو عنصر...">
 
   <div class="container" id="cardsContainer"></div>
-
-  <!-- أزرار التنقل السفلي -->
   <div id="bottomNav"></div>
 
   <script>
     const container = document.getElementById('cardsContainer');
     const navBar = document.getElementById('navBar');
     const bottomNav = document.getElementById('bottomNav');
-    const closeBtn = document.getElementById('closeBtn');
     const searchBox = document.getElementById('searchBox');
 
     let allData = [];
-    let currentView = 'all'; // الوضع الحالي: all أو html أو css أو js
+    let currentView = 'html';
     let currentFilter = '';
 
     function renderCards(filter = '') {
       container.innerHTML = '';
       let dataToRender = allData;
-
       if (currentView !== 'all') {
         dataToRender = allData.filter(d => d.type === currentView);
       }
-
       dataToRender = dataToRender.filter(d => {
         const txt = `${d.type} ${d.name} ${d.desc} ${d.example}`.toLowerCase();
         return txt.includes(filter.toLowerCase());
       });
-
       if (dataToRender.length === 0) {
         container.innerHTML = `<p style="text-align:center; font-weight:bold; margin-top:2rem;">لا توجد نتائج للبحث.</p>`;
       }
-
       dataToRender.forEach(d => {
         const card = document.createElement('div');
         card.className = 'card';
@@ -241,20 +240,10 @@
       });
     }
 
-    // عرض أزرار التنقل السفلية حسب اللغة المختارة
     function renderBottomNav() {
       bottomNav.innerHTML = '';
-      if (currentView === 'all') {
-        bottomNav.style.display = 'none';
-        closeBtn.style.display = 'none';
-        return;
-      }
-      closeBtn.style.display = 'block';
-      bottomNav.style.display = 'flex';
-
       const languages = ['html', 'css', 'js'];
       const otherLangs = languages.filter(lang => lang !== currentView);
-
       otherLangs.forEach(lang => {
         const btn = document.createElement('button');
         btn.textContent = lang.toUpperCase();
@@ -271,7 +260,6 @@
       });
     }
 
-    // تفعيل التنقل العلوي
     navBar.addEventListener('click', e => {
       if (e.target.tagName === 'BUTTON') {
         currentView = e.target.dataset.type;
@@ -280,22 +268,9 @@
         renderCards();
         setActiveNavButton();
         renderBottomNav();
-        closeBtn.style.display = 'block';
       }
     });
 
-    // زر الإغلاق لإظهار الكل
-    closeBtn.addEventListener('click', () => {
-      currentView = 'all';
-      currentFilter = '';
-      searchBox.value = '';
-      renderCards();
-      setActiveNavButton();
-      renderBottomNav();
-      closeBtn.style.display = 'none';
-    });
-
-    // البحث
     searchBox.addEventListener('input', e => {
       currentFilter = e.target.value;
       renderCards(currentFilter);
@@ -314,7 +289,6 @@
           jsRes.json()
         ]);
         allData = [...htmlData, ...cssData, ...jsData];
-
         renderCards();
         setActiveNavButton();
         renderBottomNav();
