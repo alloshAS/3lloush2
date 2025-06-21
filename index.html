@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CodeSpark</title>
+  <title>مرجع عناصر HTML وخصائص CSS وميزات JavaScript</title>
   <style>
     :root {
       --bg: #f4f7fa;
+      --section-bg: #eaf0f6;
       --card-bg: #fff;
       --border: #ddd;
       --html-color: #e44d26;
@@ -15,101 +16,109 @@
       --text: #333;
       --code-bg: #f1f6ff;
       --shadow: rgba(0, 0, 0, 0.05);
-      --primary: #0077cc;
-      --accent: #005fa3;
+      --active: #d1eaff;
     }
     body {
   background: var(--bg);
   margin: 0;
-  padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text);
 }
 
 header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem 2rem;
-  background: white;
-  box-shadow: 0 2px 5px var(--shadow);
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background: #ccc;
+  border-radius: 50%;
 }
 
 .site-info {
-  text-align: right;
+  text-align: left;
 }
 
 .site-info h1 {
   margin: 0;
-  font-size: 1.8rem;
-  color: var(--primary);
+  font-size: 1.5rem;
 }
 
 .site-info p {
   margin: 0;
+  color: #777;
   font-size: 0.95rem;
-  color: var(--accent);
-}
-
-.logo {
-  width: 50px;
-  height: 50px;
-  background-color: #ccc;
-  border-radius: 50%;
-  /* ✨ استبدل هذه الخلفية بصورة الشعار لاحقًا */
 }
 
 .search-bar {
-  background: white;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 5px var(--shadow);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  background: var(--section-bg);
+  padding: 1rem 2rem 0.5rem;
 }
 
-.search-bar svg {
+.search-box-wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.search-box-wrapper svg {
   width: 24px;
   height: 24px;
-  fill: var(--text);
+  margin: 0 0.5rem;
+  fill: #888;
 }
 
 #searchBox {
+  border: none;
+  flex: 1;
   padding: 0.8rem;
   font-size: 1rem;
-  flex-grow: 1;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  direction: ltr;
+  outline: none;
 }
 
 .language-buttons {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin: 2rem 0 1.5rem;
+  margin: 1rem 0 1.5rem;
 }
 
 .language-buttons button {
-  padding: 0.6rem 1.2rem;
+  background: white;
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
   font-size: 1rem;
-  border: none;
-  border-radius: 8px;
   cursor: pointer;
-  background: var(--primary);
-  color: white;
-  transition: background 0.3s;
+  transition: 0.2s;
 }
 
-.language-buttons button:hover {
-  background: var(--accent);
+.language-buttons button:hover,
+.language-buttons button:focus {
+  background-color: var(--active);
+}
+
+.language-buttons button.active {
+  background-color: var(--css-color);
+  color: white;
 }
 
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
-  padding: 0 2rem 4rem;
+  padding: 0 2rem 2rem;
 }
 
 .card {
@@ -169,48 +178,60 @@ pre code {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: var(--primary);
+  background-color: var(--css-color);
   color: white;
   border: none;
   border-radius: 50%;
   width: 45px;
   height: 45px;
-  font-size: 1.5rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
   cursor: pointer;
-  box-shadow: 0 0 10px var(--primary);
-  transition: transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 #scrollTopBtn:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 20px var(--accent);
+  box-shadow: 0 0 15px var(--css-color);
 }
 
   </style>
 </head>
 <body>
   <header>
-    <div class="logo"><!-- 🖼️ ضع شعار موقعك هنا --></div>
+    <div class="logo"> <!-- هنا يمكنك وضع شعار الموقع --> </div>
     <div class="site-info">
       <h1>CodeSpark</h1>
       <p>تعلّم HTML | CSS | JavaScript بسهولة</p>
     </div>
-  </header>  <div class="search-bar">
-    <svg viewBox="0 0 24 24"><path d="M10,2A8,8 0 1,0 18,10C18,11.85 17.31,13.55 16.17,14.83L21.71,20.36L20.29,21.78L14.76,16.24C13.48,17.39 11.78,18.08 10,18.08A8,8 0 0,1 10,2Z"/></svg>
-    <input type="text" id="searchBox" placeholder="ابحث عن أي خاصية أو عنصر...">
-  </div>  <div class="language-buttons">
-    <button onclick="switchLang('html')">HTML</button>
-    <button onclick="switchLang('css')">CSS</button>
-    <button onclick="switchLang('js')">JavaScript</button>
-  </div>  <div class="container" id="cardsContainer"></div>
-  <button id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>  <script>
+  </header>  <section class="search-bar">
+    <div class="search-box-wrapper">
+      <svg viewBox="0 0 24 24"><path d="M10 2a8 8 0 015.293 13.707l4 4a1 1 0 01-1.414 1.414l-4-4A8 8 0 1110 2zm0 2a6 6 0 100 12 6 6 0 000-12z"/></svg>
+      <input type="text" id="searchBox" placeholder="ابحث...">
+    </div>
+    <div class="language-buttons">
+      <button onclick="switchType('html')" id="btn-html">HTML</button>
+      <button onclick="switchType('css')" id="btn-css">CSS</button>
+      <button onclick="switchType('js')" id="btn-js">JavaScript</button>
+    </div>
+  </section>  <div class="container" id="cardsContainer"></div>
+  <button id="scrollTopBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>  <script>
     const container = document.getElementById('cardsContainer');
-    let allData = [], currentLang = 'html';
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    const buttons = {
+      html: document.getElementById('btn-html'),
+      css: document.getElementById('btn-css'),
+      js: document.getElementById('btn-js'),
+    };
+    let allData = [], currentType = 'html';
 
     function renderCards(filter = '') {
       container.innerHTML = '';
       allData
-        .filter(d => d.type === currentLang)
+        .filter(d => d.type === currentType)
         .filter(d => {
           const txt = `${d.type} ${d.name} ${d.desc} ${d.example}`.toLowerCase();
           return txt.includes(filter.toLowerCase());
@@ -226,10 +247,11 @@ pre code {
     });
 }
 
-function switchLang(lang) {
-  currentLang = lang;
-  document.getElementById('searchBox').value = '';
-  renderCards();
+function switchType(type) {
+  currentType = type;
+  Object.keys(buttons).forEach(t => buttons[t].classList.remove('active'));
+  buttons[type].classList.add('active');
+  renderCards(document.getElementById('searchBox').value);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -240,15 +262,13 @@ async function loadData() {
       fetch('css.json'),
       fetch('js.json')
     ]);
-
     const [htmlData, cssData, jsData] = await Promise.all([
       htmlRes.json(),
       cssRes.json(),
       jsRes.json()
     ]);
-
     allData = [...htmlData, ...cssData, ...jsData];
-    renderCards();
+    switchType('html');
   } catch (error) {
     console.error('حدث خطأ أثناء تحميل الملفات:', error);
     container.innerHTML = "<p>تعذر تحميل البيانات.</p>";
@@ -257,6 +277,10 @@ async function loadData() {
 
 document.getElementById('searchBox').addEventListener('input', e => {
   renderCards(e.target.value);
+});
+
+window.addEventListener('scroll', () => {
+  scrollTopBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
 });
 
 loadData();
