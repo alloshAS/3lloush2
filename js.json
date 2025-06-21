@@ -1,0 +1,308 @@
+[
+  {
+    "type": "js",
+    "name": "var",
+    "desc": "تعريف متغير بنطاق دالة، يمكن إعادة تعيينه وتعديله.",
+    "example": "var x = 5;"
+  },
+  {
+    "type": "js",
+    "name": "let",
+    "desc": "تعريف متغير بنطاق كتلة (block scope)، أكثر أمانًا من var.",
+    "example": "let x = 10;"
+  },
+  {
+    "type": "js",
+    "name": "const",
+    "desc": "تعريف متغير ثابت لا يمكن إعادة تعيينه بعد التهيئة.",
+    "example": "const pi = 3.14;"
+  },
+  {
+    "type": "js",
+    "name": "function",
+    "desc": "تعريف دالة تحتوي على كود قابل لإعادة الاستخدام.",
+    "example": "function greet(name) { return 'أهلاً ' + name; }"
+  },
+  {
+    "type": "js",
+    "name": "=> (Arrow Function)",
+    "desc": "تعريف دالة قصيرة باستخدام تعبير سهمي، يحتفظ بسياق this.",
+    "example": "const sum = (a, b) => a + b;"
+  },
+  {
+    "type": "js",
+    "name": "if/else",
+    "desc": "تنفيذ كود مشروط بناءً على تحقق شرط معين.",
+    "example": "if (x > 5) { /* كود */ } else { /* كود بديل */ }"
+  },
+  {
+    "type": "js",
+    "name": "switch",
+    "desc": "اختيار بين حالات متعددة بناءً على قيمة معينة.",
+    "example": "switch(value) { case 1: /* كود */ break; }"
+  },
+  {
+    "type": "js",
+    "name": "for",
+    "desc": "حلقة تكرار معروفة تستخدم للعد وتنفيذ كود عدة مرات.",
+    "example": "for (let i = 0; i < 5; i++) { /* كود */ }"
+  },
+  {
+    "type": "js",
+    "name": "while",
+    "desc": "حلقة تستمر طالما تحقق الشرط صحيح.",
+    "example": "while (x < 10) { x++; }"
+  },
+  {
+    "type": "js",
+    "name": "do/while",
+    "desc": "تشغيل الكود مرة واحدة على الأقل ثم التحقق من الشرط للتكرار.",
+    "example": "do { x++; } while (x < 10);"
+  },
+  {
+    "type": "js",
+    "name": "try/catch",
+    "desc": "معالجة الأخطاء لمنع توقف البرنامج عند وقوع استثناء.",
+    "example": "try { /* كود */ } catch (e) { console.error(e); }"
+  },
+  {
+    "type": "js",
+    "name": "throw",
+    "desc": "رمي استثناء مخصص لتعطيل تدفق البرنامج عند حدوث خطأ.",
+    "example": "throw new Error('خطأ!');"
+  },
+  {
+    "type": "js",
+    "name": "class",
+    "desc": "تعريف صنف (كائن) يمثل قالبًا لإنشاء كائنات متعددة.",
+    "example": "class Person { constructor(name) { this.name = name; } }"
+  },
+  {
+    "type": "js",
+    "name": "constructor",
+    "desc": "دالة خاصة داخل الصنف تُنفذ عند إنشاء كائن جديد منه.",
+    "example": "constructor(x) { this.x = x; }"
+  },
+  {
+    "type": "js",
+    "name": "extends",
+    "desc": "وراثة صنف فرعي من صنف أب لتوسيع الوظائف.",
+    "example": "class Admin extends User { /* كود */ }"
+  },
+  {
+    "type": "js",
+    "name": "super",
+    "desc": "استدعاء دوال أو خصائص الصنف الأب داخل صنف فرعي.",
+    "example": "super(name);"
+  },
+  {
+    "type": "js",
+    "name": "this",
+    "desc": "يشير إلى الكائن الحالي داخل الدالة أو الصنف.",
+    "example": "this.name = 'Ali';"
+  },
+  {
+    "type": "js",
+    "name": "new",
+    "desc": "إنشاء كائن جديد بناءً على صنف معين.",
+    "example": "let p = new Person();"
+  },
+  {
+    "type": "js",
+    "name": "setTimeout",
+    "desc": "تشغيل دالة بعد تأخير زمني محدد (بالملي ثانية).",
+    "example": "setTimeout(() => console.log('مرحباً'), 1000);"
+  },
+  {
+    "type": "js",
+    "name": "setInterval",
+    "desc": "تشغيل دالة بشكل متكرر بفواصل زمنية محددة.",
+    "example": "setInterval(() => console.log('كل ثانية'), 1000);"
+  },
+  {
+    "type": "js",
+    "name": "clearTimeout",
+    "desc": "إلغاء مؤقت تم تعيينه بـ setTimeout.",
+    "example": "clearTimeout(timer);"
+  },
+  {
+    "type": "js",
+    "name": "clearInterval",
+    "desc": "إلغاء مكرر تم تعيينه بـ setInterval.",
+    "example": "clearInterval(loop);"
+  },
+  {
+    "type": "js",
+    "name": "Array",
+    "desc": "كائن مصفوفة يحتوي على قائمة من العناصر.",
+    "example": "let arr = [1, 2, 3];"
+  },
+  {
+    "type": "js",
+    "name": "Object",
+    "desc": "كائن يحتوي على خصائص وقيم مرتبطة.",
+    "example": "let user = { name: 'Ali' };"
+  },
+  {
+    "type": "js",
+    "name": "JSON",
+    "desc": "تنسيق لتحويل الكائنات إلى نص والعكس، لتبادل البيانات.",
+    "example": "JSON.stringify(obj);"
+  },
+  {
+    "type": "js",
+    "name": "Math",
+    "desc": "كائن يحتوي على دوال رياضية مثل الجذر والتقريب.",
+    "example": "Math.random(); Math.floor(5.6);"
+  },
+  {
+    "type": "js",
+    "name": "Date",
+    "desc": "كائن يمثل التاريخ والوقت الحالي أو مخصص.",
+    "example": "let now = new Date();"
+  },
+  {
+    "type": "js",
+    "name": "RegExp",
+    "desc": "تعبيرات منتظمة تستخدم للبحث والتطابق في النصوص.",
+    "example": "/[a-z]+/gi"
+  },
+  {
+    "type": "js",
+    "name": "map",
+    "desc": "تكرار وتحويل عناصر المصفوفة وإرجاع مصفوفة جديدة.",
+    "example": "[1, 2, 3].map(x => x * 2);"
+  },
+  {
+    "type": "js",
+    "name": "filter",
+    "desc": "تصفية عناصر المصفوفة حسب شرط معين وإرجاع عناصر مطابقة.",
+    "example": "[1, 2, 3].filter(x => x > 1);"
+  },
+  {
+    "type": "js",
+    "name": "reduce",
+    "desc": "اختزال المصفوفة إلى قيمة واحدة عن طريق دمج العناصر.",
+    "example": "[1, 2, 3].reduce((a, b) => a + b);"
+  },
+  {
+    "type": "js",
+    "name": "includes",
+    "desc": "التحقق من وجود عنصر معين داخل المصفوفة أو النص.",
+    "example": "[1, 2, 3].includes(2);"
+  },
+  {
+    "type": "js",
+    "name": "spread (...)",
+    "desc": "نشر عناصر مصفوفة أو كائن داخل آخر.",
+    "example": "let newArr = [...arr];"
+  },
+  {
+    "type": "js",
+    "name": "rest (...)",
+    "desc": "تجميع عدد غير محدد من المتغيرات في مصفوفة واحدة.",
+    "example": "function f(...args) { }"
+  },
+  {
+    "type": "js",
+    "name": "async/await",
+    "desc": "طريقة كتابة أكواد غير متزامنة بشكل متسلسل وسهل القراءة.",
+    "example": "async function f() { await fetch(url); }"
+  },
+  {
+    "type": "js",
+    "name": "Promise",
+    "desc": "تمثيل عملية غير متزامنة ستُكمل لاحقًا بالنجاح أو الفشل.",
+    "example": "new Promise((res, rej) => { /* كود */ });"
+  },
+  {
+    "type": "js",
+    "name": "fetch",
+    "desc": "طلب بيانات من API أو خادم خارجي بطريقة غير متزامنة.",
+    "example": "fetch('/api').then(response => response.json());"
+  },
+  {
+    "type": "js",
+    "name": "localStorage",
+    "desc": "تخزين بيانات في المتصفح بشكل دائم حتى بعد إغلاق الصفحة.",
+    "example": "localStorage.setItem('x', '1');"
+  },
+  {
+    "type": "js",
+    "name": "sessionStorage",
+    "desc": "تخزين بيانات مؤقت في المتصفح حتى إغلاق التبويب أو المتصفح.",
+    "example": "sessionStorage.setItem('y', '2');"
+  },
+  {
+    "type": "js",
+    "name": "document",
+    "desc": "تمثيل صفحة الويب الحالية، يتيح التفاعل مع عناصر الصفحة.",
+    "example": "document.getElementById('id');"
+  },
+  {
+    "type": "js",
+    "name": "querySelector",
+    "desc": "اختيار أول عنصر يطابق محدد CSS في الصفحة.",
+    "example": "document.querySelector('.class');"
+  },
+  {
+    "type": "js",
+    "name": "addEventListener",
+    "desc": "ربط دالة بتنفيذ عند وقوع حدث معين على عنصر.",
+    "example": "btn.addEventListener('click', doSomething);"
+  },
+  {
+    "type": "js",
+    "name": "classList",
+    "desc": "التعامل مع قائمة الأصناف (الكلاسات) لعنصر DOM.",
+    "example": "el.classList.add('active');"
+  },
+  {
+    "type": "js",
+    "name": "innerHTML",
+    "desc": "تغيير محتوى العنصر النصي مع دعم HTML.",
+    "example": "div.innerHTML = '<p>مرحبًا</p>';"
+  },
+  {
+    "type": "js",
+    "name": "textContent",
+    "desc": "تغيير نص العنصر بدون تضمين HTML.",
+    "example": "div.textContent = 'نص فقط';"
+  },
+  {
+    "type": "js",
+    "name": "setAttribute",
+    "desc": "تعيين أو تعديل سمة لعنصر HTML.",
+    "example": "el.setAttribute('type', 'text');"
+  },
+  {
+    "type": "js",
+    "name": "Proxy",
+    "desc": "إنشاء كائن وسيط لاعتراض العمليات على كائن آخر.",
+    "example": "new Proxy(obj, handler);"
+  },
+  {
+    "type": "js",
+    "name": "Reflect",
+    "desc": "واجهة برمجية للتعامل مع عمليات الكائن بطريقة مدمجة.",
+    "example": "Reflect.get(obj, 'key');"
+  },
+  {
+    "type": "js",
+    "name": "Symbol",
+    "desc": "إنشاء معرف فريد لا يتكرر يمكن استخدامه كمفتاح في الكائنات.",
+    "example": "let sym = Symbol('desc');"
+  },
+  {
+    "type": "js",
+    "name": "BigInt",
+    "desc": "نوع بيانات للتعامل مع أعداد صحيحة كبيرة جداً تتجاوز حدود الأعداد العادية في JavaScript.",
+    "example": "let big = 12345678901234567890n;"
+  },
+  {
+    "type": "js",
+    "name": "Intl",
+    "desc": "كائن يوفر دعمًا للغات والتنسيقات المختلفة للأرقام، التواريخ، العملات، وغير ذلك، حسب اللغة والمنطقة.",
+    "example": "new Intl.NumberFormat('ar-EG').format(123456);"
+  }
+]

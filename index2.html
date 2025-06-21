@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مرجع عناصر HTML وخصائص CSS وميزات JavaScript</title>
+  <style>
+    :root {
+      --bg: #f4f7fa;
+      --card-bg: #fff;
+      --border: #ddd;
+      --html-color: #e44d26;
+      --css-color: #264de4;
+      --js-color: #f0db4f;
+      --text: #333;
+      --code-bg: #f1f6ff;
+      --shadow: rgba(0, 0, 0, 0.05);
+    }
+
+    body {
+      background: var(--bg);
+      margin: 0;
+      padding: 2rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--text);
+      margin-bottom: 2rem;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px var(--shadow);
+      padding: 1rem;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px var(--shadow);
+    }
+
+    .label {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .html { background-color: var(--html-color); }
+    .css { background-color: var(--css-color); }
+    .js { background-color: var(--js-color); color: #000; }
+
+    .title {
+      font-weight: bold;
+      margin-top: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .desc {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    pre code {
+      background-color: var(--code-bg);
+      padding: 0.7rem;
+      display: block;
+      border-radius: 6px;
+      direction: ltr;
+      overflow-x: auto;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    #searchBox {
+      display: block;
+      margin: 0 auto 2rem auto;
+      padding: 0.8rem;
+      font-size: 1rem;
+      width: 100%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      direction: ltr;
+    }
+  </style>
+</head>
+<body>
+  <h1>مرجع شامل لعناصر HTML وخصائص CSS وميزات JavaScript</h1>
+  <input type="text" id="searchBox" placeholder="🔍 ابحث عن أي خاصية أو عنصر...">
+  <div class="container" id="cardsContainer"></div>
+
+  <script>
+    const container = document.getElementById('cardsContainer');
+    let allData = [];
+
+    function renderCards(filter = '') {
+      container.innerHTML = '';
+      allData
+        .filter(d => {
+          const txt = `${d.type} ${d.name} ${d.desc} ${d.example}`.toLowerCase();
+          return txt.includes(filter.toLowerCase());
+        })
+        .forEach(d => {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = `
+            <div class="label ${d.type}">${d.type.toUpperCase()}</div>
+            <div class="title">${d.name}</div>
+            <div class="desc">${d.desc}</div>
+            <pre><code>${d.example}</code></pre>`;
+          container.appendChild(card);
+        });
+    }
+
+    async function loadData() {
+      try {
+        const [htmlRes, cssRes, jsRes] = await Promise.all([
+          fetch('html.json'),
+          fetch('css.json'),
+          fetch('js.json')
+        ]);
+
+        const [htmlData, cssData, jsData] = await Promise.all([
+          htmlRes.json(),
+          cssRes.json(),
+          jsRes.json()
+        ]);
+
+        // ✅ كل ملف يحتوي على مصفوفة كائنات جاهزة بصيغة:
+        // { type: "html" | "css" | "js", name: "...", desc: "...", example: "..." }
+        allData = [...htmlData, ...cssData, ...jsData];
+
+        renderCards();
+      } catch (error) {
+        console.error('حدث خطأ أثناء تحميل الملفات:', error);
+        container.innerHTML = "<p>تعذر تحميل البيانات.</p>";
+      }
+    }
+
+    document.getElementById('searchBox').addEventListener('input', e => {
+      renderCards(e.target.value);
+    });
+
+    loadData();
+  </script>
+</body>
+</html>

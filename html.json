@@ -1,0 +1,632 @@
+[
+  {
+    "type": "html",
+    "name": "a",
+    "desc": "عنصر لإنشاء رابط تشعبي يُستخدم للتنقل بين صفحات الويب أو مواقع أخرى، يدعم خصائص مثل target لفتح الرابط في تبويب جديد، وrel لتحسين الأمان والخصوصية.",
+    "example": "<a href='https://example.com' target='_blank' rel='noopener'>رابط خارجي</a>"
+  },
+  {
+    "type": "html",
+    "name": "abbr",
+    "desc": "يُستخدم لتقديم اختصار أو مصطلح يحتاج إلى شرح إضافي يظهر عند تمرير الفأرة فوقه، مفيد لتعريف الكلمات المختصرة أو المصطلحات.",
+    "example": "<abbr title='HyperText Markup Language'>HTML</abbr>"
+  },
+  {
+    "type": "html",
+    "name": "address",
+    "desc": "يحتوي على معلومات الاتصال مثل العنوان، البريد الإلكتروني، أو أرقام الهواتف، ويُعرض عادة بطريقة مميزة تساعد المستخدم على التعرف على معلومات التواصل.",
+    "example": "<address>البريد الإلكتروني: example@example.com</address>"
+  },
+  {
+    "type": "html",
+    "name": "area",
+    "desc": "يُستخدم لتعريف مناطق تفاعلية داخل صورة خريطة (image map)، مما يسمح بإنشاء روابط تعمل على أجزاء معينة من الصورة بدقة.",
+    "example": "<area shape='rect' coords='34,44,270,350' href='sun.htm' alt='شمس'>"
+  },
+  {
+    "type": "html",
+    "name": "article",
+    "desc": "عنصر يحتوي على محتوى مستقل له معنى كامل، مثل مقالة أو تدوينة أو جزء من الأخبار، مما يسهل على محركات البحث والمستخدمين فهم المحتوى.",
+    "example": "<article><h2>عنوان المقال</h2><p>محتوى المقال هنا.</p></article>"
+  },
+  {
+    "type": "html",
+    "name": "aside",
+    "desc": "محتوى جانبي مرتبط بالمحتوى الرئيسي، مثل روابط جانبية، إعلانات، أو معلومات إضافية غير أساسية للمحتوى الرئيسي.",
+    "example": "<aside>روابط جانبية أو محتوى غير رئيسي</aside>"
+  },
+  {
+    "type": "html",
+    "name": "audio",
+    "desc": "عنصر لتشغيل ملفات الصوت مع أدوات تحكم مثل التشغيل، الإيقاف، وتحديد مستوى الصوت، ويوفر تجربة صوتية للمستخدمين.",
+    "example": "<audio controls src='file.mp3'>متصفحك لا يدعم عنصر الصوت.</audio>"
+  },
+  {
+    "type": "html",
+    "name": "b",
+    "desc": "يعرض النص بشكل عريض (Bold) من دون إضافة دلالة معنوية، يُستخدم فقط لتحسين مظهر النص وجعله أكثر وضوحاً.",
+    "example": "<b>نص عريض</b>"
+  },
+  {
+    "type": "html",
+    "name": "base",
+    "desc": "يحدد عنوان URL الأساسي لجميع الروابط النسبية داخل الصفحة، ويجب وضعه داخل عنصر الرأس `<head>` مرة واحدة فقط.",
+    "example": "<base href='https://example.com/'>"
+  },
+  {
+    "type": "html",
+    "name": "bdi",
+    "desc": "يعزل اتجاه النص بحيث يُعرض بشكل صحيح عند استخدام نصوص بلغات مختلفة الاتجاه في نفس السطر، مثل دمج النص العربي مع النص الإنجليزي.",
+    "example": "<bdi>نص مع اتجاه معزول</bdi>"
+  },
+  {
+    "type": "html",
+    "name": "bdo",
+    "desc": "يعيد توجيه اتجاه النص يدوياً، يسمح بعرض النص من اليمين إلى اليسار أو العكس بغض النظر عن اتجاه الصفحة الأساسي.",
+    "example": "<bdo dir='rtl'>هذا نص من اليمين إلى اليسار</bdo>"
+  },
+  {
+    "type": "html",
+    "name": "blockquote",
+    "desc": "يستخدم لاقتباس طويل من مصدر آخر، يعرض بنمط مميز وعادة ما يحتوي على إمكانية إضافة رابط المصدر لزيادة المصداقية.",
+    "example": "<blockquote cite='https://example.com'>هذا اقتباس طويل من موقع.</blockquote>"
+  },
+  {
+    "type": "html",
+    "name": "body",
+    "desc": "يحتوي على محتوى الصفحة الذي يُعرض للمستخدم، كل النصوص والعناصر المرئية توضع داخل هذا العنصر.",
+    "example": "<body>محتوى الصفحة هنا</body>"
+  },
+  {
+    "type": "html",
+    "name": "br",
+    "desc": "فاصل سطر يستخدم لإنهاء السطر الحالي والانتقال إلى سطر جديد، دون إضافة مساحة رأسية إضافية.",
+    "example": "السطر الأول<br>السطر الثاني"
+  },
+  {
+    "type": "html",
+    "name": "button",
+    "desc": "زر تفاعلي يمكن استخدامه في النماذج أو لتنفيذ أوامر عند النقر عليه، يمكن تخصيصه بأنواع مختلفة مثل submit أو reset.",
+    "example": "<button type='button'>اضغط هنا</button>"
+  },
+  {
+    "type": "html",
+    "name": "canvas",
+    "desc": "عنصر للرسم برمجياً باستخدام JavaScript لإنشاء رسومات ديناميكية، ألعاب، رسوم متحركة، وغيرها من الرسوميات المعقدة.",
+    "example": "<canvas id='myCanvas' width='200' height='100'></canvas>"
+  },
+  {
+    "type": "html",
+    "name": "caption",
+    "desc": "عنوان يظهر فوق الجدول لتوضيح محتوى الجدول بشكل مختصر وواضح للمستخدمين.",
+    "example": "<table><caption>عنوان الجدول</caption><tr><td>بيانات</td></tr></table>"
+  },
+  {
+    "type": "html",
+    "name": "cite",
+    "desc": "يستخدم لذكر مصدر أو اسم كتاب أو عمل أدبي أو فني بشكل واضح داخل النص.",
+    "example": "<cite>اسم الكتاب أو المصدر</cite>"
+  },
+  {
+    "type": "html",
+    "name": "code",
+    "desc": "يعرض نصوص برمجية أو أكواد بخط ثابت ومنسق لتسهيل القراءة والتمييز عن باقي النص.",
+    "example": "<code>let x = 5;</code>"
+  },
+  {
+    "type": "html",
+    "name": "col",
+    "desc": "يعين خصائص لعمود معين في الجدول مثل العرض أو اللون، ويستخدم داخل عنصر `<colgroup>`.",
+    "example": "<col style='background-color:yellow'>"
+  },
+  {
+    "type": "html",
+    "name": "colgroup",
+    "desc": "تجميع أعمدة في الجدول لتعيين خصائص جماعية لهم مثل العرض أو اللون بطريقة منظمة.",
+    "example": "<colgroup><col span='2' style='background-color:lightblue'></colgroup>"
+  },
+  {
+    "type": "html",
+    "name": "data",
+    "desc": "عنصر يحتوي على بيانات مرتبطة بقيمة قابلة للقراءة آليًا مثل أرقام أو رموز، مفيد لربط البيانات النصية بقيمة رقمية أو منطقية.",
+    "example": "<data value='12345'>رقم الحساب</data>"
+  },
+  {
+    "type": "html",
+    "name": "datalist",
+    "desc": "قائمة خيارات مدعومة لعنصر إدخال النص لتسهيل الإكمال التلقائي للمستخدم أثناء الكتابة.",
+    "example": "<input list='browsers'><datalist id='browsers'><option value='Chrome'><option value='Firefox'></datalist>"
+  },
+  {
+    "type": "html",
+    "name": "dd",
+    "desc": "تعريف أو شرح لمصطلح في قائمة تعريفية `<dl>`، يستخدم لشرح أو توضيح المصطلحات المعروضة.",
+    "example": "<dl><dt>HTML</dt><dd>لغة ترميز النص التشعبي</dd></dl>"
+  },
+  {
+    "type": "html",
+    "name": "del",
+    "desc": "نص محذوف من المستند، يظهر مشطوباً ليشير إلى أنه تم حذفه أو إلغاؤه.",
+    "example": "<del>هذا النص تم حذفه</del>"
+  },
+  {
+    "type": "html",
+    "name": "details",
+    "desc": "عنصر يمكن توسيعه لإظهار أو إخفاء محتوى إضافي عند النقر عليه، يستخدم لتقديم معلومات اختيارية أو تفاصيل إضافية.",
+    "example": "<details><summary>مزيد من التفاصيل</summary><p>محتوى إضافي يمكن إخفاؤه.</p></details>"
+  },
+  {
+    "type": "html",
+    "name": "dfn",
+    "desc": "تعريف مصطلح جديد في النص، يظهر عادة بخط مائل عند ظهوره لأول مرة لتوضيح المعنى.",
+    "example": "<dfn>HTML</dfn>"
+  },
+  {
+    "type": "html",
+    "name": "dialog",
+    "desc": "عنصر لعرض مربع حوار تفاعلي يمكن فتحه أو إغلاقه برمجيًا، مناسب للنوافذ المنبثقة والتنبيهات.",
+    "example": "<dialog open>مربع حوار مفتوح</dialog>"
+  },
+  {
+    "type": "html",
+    "name": "div",
+    "desc": "عنصر عام لتجميع المحتوى، لا يحمل معنى دلالي، يستخدم عادة لتنسيق وتصميم صفحات الويب عبر CSS.",
+    "example": "<div class='container'>محتوى هنا</div>"
+  },
+  {
+    "type": "html",
+    "name": "dl",
+    "desc": "قائمة تعريفية تجمع بين مصطلحات وتعريفاتها عبر عناصر `<dt>` و `<dd>`.",
+    "example": "<dl><dt>HTML</dt><dd>لغة ترميز النص التشعبي</dd></dl>"
+  },
+  {
+    "type": "html",
+    "name": "dt",
+    "desc": "مصطلح في قائمة تعريفية `<dl>`، يليه عادة تعريف في عنصر `<dd>`.",
+    "example": "<dt>HTML</dt>"
+  },
+  {
+    "type": "html",
+    "name": "em",
+    "desc": "عنصر لإضافة تأكيد أو تشديد على جزء من النص، يُقرأ بنبرة مختلفة في المساعدات الصوتية.",
+    "example": "<em>نص مؤكد</em>"
+  },
+  {
+    "type": "html",
+    "name": "embed",
+    "desc": "تضمين محتوى خارجي مثل فيديو، صوت، أو مستندات من مصادر أخرى داخل الصفحة.",
+    "example": "<embed src='file.pdf' width='600' height='400'>"
+  },
+  {
+    "type": "html",
+    "name": "fieldset",
+    "desc": "عنصر لتجميع عناصر النموذج ذات الصلة مع توفير إطار مرئي، غالبًا مع عنوان عبر `<legend>`.",
+    "example": "<fieldset><legend>معلومات شخصية</legend><input></fieldset>"
+  },
+  {
+    "type": "html",
+    "name": "figcaption",
+    "desc": "تعليق توضيحي يُضاف لعنصر `<figure>`، عادة لشرح صورة أو رسم بياني.",
+    "example": "<figure><img src='img.png'><figcaption>شرح الصورة</figcaption></figure>"
+  },
+  {
+    "type": "html",
+    "name": "figure",
+    "desc": "عنصر لتغليف محتوى مثل الصور مع تعليق توضيحي مرتبط عبر `<figcaption>`.",
+    "example": "<figure><img src='img.png' alt='صورة'><figcaption>وصف الصورة</figcaption></figure>"
+  },
+  {
+    "type": "html",
+    "name": "footer",
+    "desc": "قسم تذييل الصفحة أو القسم يحتوي عادة على معلومات حقوق النشر أو روابط إضافية.",
+    "example": "<footer>حقوق النشر © 2025</footer>"
+  },
+  {
+    "type": "html",
+    "name": "form",
+    "desc": "عنصر لإنشاء نموذج تفاعلي لجمع بيانات المستخدم مع دعم مختلف أنواع الحقول والإرسال.",
+    "example": "<form action='/submit' method='post'><input type='text'><button>إرسال</button></form>"
+  },
+  {
+    "type": "html",
+    "name": "h1",
+    "desc": "العنوان الرئيسي للصفحة أو القسم، يستخدم لأهم عنوان ويجب استخدامه مرة واحدة فقط في الصفحة.",
+    "example": "<h1>عنوان رئيسي</h1>"
+  },
+  {
+    "type": "html",
+    "name": "h2",
+    "desc": "عنوان فرعي يُستخدم لتنظيم المحتوى تحت العنوان الرئيسي.",
+    "example": "<h2>عنوان فرعي</h2>"
+  },
+  {
+    "type": "html",
+    "name": "h3",
+    "desc": "عنوان من المستوى الثالث لتقسيم المحتوى بشكل أدق.",
+    "example": "<h3>عنوان من المستوى الثالث</h3>"
+  },
+  {
+    "type": "html",
+    "name": "head",
+    "desc": "العنصر الذي يحتوي على بيانات وصفية (metadata) مثل العنوان، الروابط إلى ملفات CSS، وملفات JavaScript.",
+    "example": "<head><title>عنوان الصفحة</title></head>"
+  },
+  {
+    "type": "html",
+    "name": "header",
+    "desc": "قسم رأس الصفحة أو القسم يحتوي عادة على شعار، قائمة تنقل، أو عنوان الموقع.",
+    "example": "<header><h1>شعار الموقع</h1></header>"
+  },
+  {
+    "type": "html",
+    "name": "hr",
+    "desc": "فاصل خط أفقي يستخدم لتقسيم المحتوى بصريًا.",
+    "example": "<hr>"
+  },
+  {
+    "type": "html",
+    "name": "html",
+    "desc": "الجذر الأساسي لكل صفحة ويب، يحتوي على كل عناصر الصفحة ضمنه.",
+    "example": "<html lang='ar'></html>"
+  },
+  {
+    "type": "html",
+    "name": "i",
+    "desc": "يعرض النص بخط مائل، يستخدم عادة للنصوص التي تتطلب إبراز دون دلالة معنوية قوية.",
+    "example": "<i>نص مائل</i>"
+  },
+  {
+    "type": "html",
+    "name": "iframe",
+    "desc": "عنصر لعرض صفحة ويب أخرى داخل الصفحة الحالية عبر إطار مستقل.",
+    "example": "<iframe src='https://example.com' width='600' height='400'></iframe>"
+  },
+  {
+    "type": "html",
+    "name": "img",
+    "desc": "لعرض صورة على الصفحة، مع خصائص مثل src لتحديد مصدر الصورة وalt للنص البديل.",
+    "example": "<img src='image.jpg' alt='وصف الصورة'>"
+  },
+  {
+    "type": "html",
+    "name": "input",
+    "desc": "عنصر لإدخال بيانات المستخدم بأنواع متعددة مثل نص، كلمة مرور، تاريخ، وغيرها.",
+    "example": "<input type='text' placeholder='أدخل اسمك'>"
+  },
+  {
+    "type": "html",
+    "name": "ins",
+    "desc": "نص تم إدراجه حديثًا في المستند، يظهر تحت تأثير مشطوب بالعكس مقارنةً بـ `<del>`.",
+    "example": "<ins>نص مضاف</ins>"
+  },
+  {
+    "type": "html",
+    "name": "kbd",
+    "desc": "يعرض نص يُشير إلى إدخال من لوحة المفاتيح، مثل الاختصارات أو الأزرار.",
+    "example": "<kbd>Ctrl + C</kbd>"
+  },
+  {
+    "type": "html",
+    "name": "label",
+    "desc": "تعريف تسمية لعنصر إدخال، يسهل اختيار الحقل عند النقر على النص المرتبط به.",
+    "example": "<label for='name'>الاسم:</label><input id='name' type='text'>"
+  },
+  {
+    "type": "html",
+    "name": "legend",
+    "desc": "عنوان لمجموعة عناصر داخل `<fieldset>`, يظهر كعنوان للمجموعة.",
+    "example": "<fieldset><legend>معلومات الاتصال</legend></fieldset>"
+  },
+  {
+    "type": "html",
+    "name": "li",
+    "desc": "عنصر قائمة يستخدم داخل قوائم مرتبة `<ol>` أو غير مرتبة `<ul>`.",
+    "example": "<ul><li>عنصر قائمة</li></ul>"
+  },
+  {
+    "type": "html",
+    "name": "link",
+    "desc": "يستخدم لربط الصفحة بملفات خارجية مثل CSS أو تعريف الأيقونة (favicon).",
+    "example": "<link rel='stylesheet' href='style.css'>"
+  },
+  {
+    "type": "html",
+    "name": "main",
+    "desc": "يمثل المحتوى الرئيسي الفريد للصفحة، ويجب أن يحتوي على المحتوى الأساسي فقط.",
+    "example": "<main>محتوى رئيسي للصفحة</main>"
+  },
+  {
+    "type": "html",
+    "name": "map",
+    "desc": "عنصر لتعريف خريطة صورة (image map) تستخدم مع عنصر `<area>` لتحديد مناطق تفاعلية في صورة.",
+    "example": "<map name='map1'><area shape='rect' coords='0,0,100,100' href='#'></map>"
+  },
+  {
+    "type": "html",
+    "name": "mark",
+    "desc": "يستخدم لتظليل نص معين لتسليط الضوء عليه، مثل نتائج البحث أو التنبيهات.",
+    "example": "<mark>نص مظلل</mark>"
+  },
+  {
+    "type": "html",
+    "name": "meta",
+    "desc": "يحتوي على بيانات وصفية للصفحة مثل الترميز، الكلمات المفتاحية، ووصف الصفحة لمحركات البحث.",
+    "example": "<meta charset='UTF-8'>"
+  },
+  {
+    "type": "html",
+    "name": "meter",
+    "desc": "يعرض مقياسًا لقيمة ضمن نطاق محدد، مثل مستوى البطارية أو نسبة التقدم.",
+    "example": "<meter value='0.6'>60%</meter>"
+  },
+  {
+    "type": "html",
+    "name": "nav",
+    "desc": "قسم مخصص لقوائم التنقل الرئيسية في الموقع.",
+    "example": "<nav><ul><li><a href='#'>الرئيسية</a></li></ul></nav>"
+  },
+  {
+    "type": "html",
+    "name": "noscript",
+    "desc": "يُعرض محتوى بديل للمستخدمين الذين لديهم JavaScript معطلة أو غير مدعومة.",
+    "example": "<noscript>يرجى تمكين جافا سكريبت للاستمتاع بالموقع</noscript>"
+  },
+  {
+    "type": "html",
+    "name": "object",
+    "desc": "يُستخدم لتضمين محتوى متعدد الوسائط أو تطبيقات خارجية في الصفحة مثل ملفات PDF أو Flash.",
+    "example": "<object data='file.pdf' type='application/pdf' width='600' height='400'></object>"
+  },
+  {
+    "type": "html",
+    "name": "ol",
+    "desc": "قائمة مرتبة تعرض عناصرها برقم أو تسلسل معين.",
+    "example": "<ol><li>العنصر الأول</li><li>العنصر الثاني</li></ol>"
+  },
+  {
+    "type": "html",
+    "name": "optgroup",
+    "desc": "مجموعة خيارات داخل `<select>` لتجميع خيارات ذات صلة معًا.",
+    "example": "<select><optgroup label='الرياضيات'><option>الجبر</option></optgroup></select>"
+  },
+  {
+    "type": "html",
+    "name": "option",
+    "desc": "عنصر خيار داخل قائمة منسدلة `<select>`.",
+    "example": "<option value='1'>الخيار 1</option>"
+  },
+  {
+    "type": "html",
+    "name": "output",
+    "desc": "يعرض نتائج العمليات أو حسابات المستخدم بشكل ديناميكي.",
+    "example": "<output name='result'>0</output>"
+  },
+  {
+    "type": "html",
+    "name": "p",
+    "desc": "عنصر فقرة لنصوص مكتوبة.",
+    "example": "<p>هذه فقرة نصية.</p>"
+  },
+  {
+    "type": "html",
+    "name": "param",
+    "desc": "يمرر معطيات إلى عنصر `<object>` لتخصيص المحتوى المعروض.",
+    "example": "<object data='movie.swf'><param name='autoplay' value='true'></object>"
+  },
+  {
+    "type": "html",
+    "name": "picture",
+    "desc": "عنصر لتقديم صور متعددة بدقة وأحجام مختلفة حسب الجهاز والمتصفح.",
+    "example": "<picture><source srcset='small.jpg' media='(max-width:600px)'><img src='large.jpg' alt='صورة'></picture>"
+  },
+  {
+    "type": "html",
+    "name": "pre",
+    "desc": "لعرض نص منسق مسبقاً (مثل الكود) يحافظ على الفراغات والأسطر.",
+    "example": "<pre>    نص منسق مسبقًا</pre>"
+  },
+  {
+    "type": "html",
+    "name": "progress",
+    "desc": "شريط تقدم يعرض نسبة إكمال عملية معينة.",
+    "example": "<progress value='70' max='100'></progress>"
+  },
+  {
+    "type": "html",
+    "name": "q",
+    "desc": "اقتباس قصير داخل النص يظهر بين علامتي اقتباس.",
+    "example": "<q>هذا اقتباس قصير.</q>"
+  },
+  {
+    "type": "html",
+    "name": "rp",
+    "desc": "نص بديل يظهر في المتصفحات التي لا تدعم علامات التشكيل اليابانية (ruby).",
+    "example": "<ruby>漢<rp>(</rp>漢字<rp>)</rp></ruby>"
+  },
+  {
+    "type": "html",
+    "name": "rt",
+    "desc": "توضيح أو نطق لكلمة في النص باستخدام ruby annotation (علامات التشكيل اليابانية).",
+    "example": "<ruby>漢<rt>kan</rt></ruby>"
+  },
+  {
+    "type": "html",
+    "name": "ruby",
+    "desc": "عنصر لتوفير نصوص شرح أو نطق للكلمات في النصوص الآسيوية مثل اليابانية والصينية.",
+    "example": "<ruby>漢<rt>kan</rt></ruby>"
+  },
+  {
+    "type": "html",
+    "name": "s",
+    "desc": "نص مشطوب يدل على حذف أو تعديل في المحتوى.",
+    "example": "<s>نص مشطوب</s>"
+  },
+  {
+    "type": "html",
+    "name": "samp",
+    "desc": "نص يعرض مخرجات البرامج أو الكود من النظام.",
+    "example": "<samp>خطأ: لم يتم العثور على الملف</samp>"
+  },
+  {
+    "type": "html",
+    "name": "script",
+    "desc": "يضم كود JavaScript يمكن تنفيذه في الصفحة.",
+    "example": "<script>console.log('مرحباً');</script>"
+  },
+  {
+    "type": "html",
+    "name": "section",
+    "desc": "قسم عام في الصفحة يستخدم لتنظيم المحتوى ضمن موضوع معين.",
+    "example": "<section><h2>عنوان القسم</h2><p>محتوى القسم</p></section>"
+  },
+  {
+    "type": "html",
+    "name": "select",
+    "desc": "عنصر لإنشاء قائمة منسدلة تسمح للمستخدم باختيار خيار واحد أو أكثر.",
+    "example": "<select><option>خيار 1</option><option>خيار 2</option></select>"
+  },
+  {
+    "type": "html",
+    "name": "small",
+    "desc": "نص صغير الحجم عادة يستخدم للملاحظات أو التعليقات التوضيحية.",
+    "example": "<small>ملاحظة مهمة</small>"
+  },
+  {
+    "type": "html",
+    "name": "source",
+    "desc": "يستخدم داخل عناصر `<audio>` أو `<video>` أو `<picture>` لتحديد مصادر متعددة للوسائط.",
+    "example": "<video controls><source src='video.mp4' type='video/mp4'></video>"
+  },
+  {
+    "type": "html",
+    "name": "span",
+    "desc": "عنصر عام لتغليف جزء من النص أو المحتوى بدون معنى دلالي، يستخدم للتنسيق عبر CSS.",
+    "example": "<span class='highlight'>نص مميز</span>"
+  },
+  {
+    "type": "html",
+    "name": "strong",
+    "desc": "نص ذو أهمية قوية، يظهر عادة بخط عريض ويشير إلى تشديد معنوي.",
+    "example": "<strong>نص مهم</strong>"
+  },
+  {
+    "type": "html",
+    "name": "style",
+    "desc": "يضم أكواد CSS لتنسيق الصفحة مباشرة داخل وثيقة HTML.",
+    "example": "<style>p { color: red; }</style>"
+  },
+  {
+    "type": "html",
+    "name": "sub",
+    "desc": "يعرض نصًا كحرف سفلي (أسفل السطر)، يستخدم عادة في الصيغ العلمية والرياضية.",
+    "example": "<sub>2</sub>"
+  },
+  {
+    "type": "html",
+    "name": "summary",
+    "desc": "عنوان لعنصر `<details>`، يظهر دائماً ويستخدم للنقر لفتح أو إغلاق المحتوى المخفي.",
+    "example": "<details><summary>مزيد من التفاصيل</summary><p>المحتوى المخفي</p></details>"
+  },
+  {
+    "type": "html",
+    "name": "sup",
+    "desc": "يعرض نصًا كحرف علوي (فوق السطر)، يستخدم عادة في الصيغ الرياضية أو الإشارات المرجعية.",
+    "example": "<sup>3</sup>"
+  },
+  {
+    "type": "html",
+    "name": "table",
+    "desc": "ينشئ جدولًا لعرض البيانات بشكل منظم في صفوف وأعمدة.",
+    "example": "<table><tr><td>خلية</td></tr></table>"
+  },
+  {
+    "type": "html",
+    "name": "tbody",
+    "desc": "مجموعة الصفوف الأساسية داخل الجدول، توضع بين `<table>` و `<tfoot>` أو `<thead>`.",
+    "example": "<tbody><tr><td>محتوى</td></tr></tbody>"
+  },
+  {
+    "type": "html",
+    "name": "td",
+    "desc": "خلية بيانات داخل صف الجدول.",
+    "example": "<td>محتوى الخلية</td>"
+  },
+{
+  "type": "html",
+  "name": "template",
+  "desc": "عنصر يُستخدم لتعريف محتوى HTML مخفي (غير ظاهر في الصفحة) يمكن نسخه واستخدامه لاحقًا عبر JavaScript. لا يُعرض محتواه إلا عند استدعائه برمجيًا، مفيد لإعادة استخدام قوالب المحتوى ديناميكيًا دون تكرار الكود في الصفحة.",
+  "example": "<template><div>هذا قالب محتوى مخفي</div></template>"
+},
+{
+    "type": "html",
+    "name": "tfoot",
+    "desc": "يُستخدم لتعريف تذييل الجدول، عادة يحتوي على خلايا ملخصة أو معلومات إجمالية لبيانات الجدول.",
+    "example": "<tfoot><tr><td>مجموع</td><td>100</td></tr></tfoot>"
+  },
+  {
+    "type": "html",
+    "name": "th",
+    "desc": "خلية رأسية في الجدول، تعرض عنوان أو تسمية للعمود أو الصف، وتظهر عادة بخط عريض ومتمركز.",
+    "example": "<th>اسم العمود</th>"
+  },
+  {
+    "type": "html",
+    "name": "thead",
+    "desc": "يحتوي على صفوف رأس الجدول، مفيد لتنظيم وتنسيق رؤوس الأعمدة بشكل مستقل عن بيانات الجدول.",
+    "example": "<thead><tr><th>عنوان</th></tr></thead>"
+  },
+  {
+    "type": "html",
+    "name": "time",
+    "desc": "يمثل تاريخًا أو وقتًا في شكل قابل للقراءة آليًا من قبل المتصفحات ومحركات البحث.",
+    "example": "<time datetime='2025-06-21T15:30'>21 يونيو 2025</time>"
+  },
+  {
+    "type": "html",
+    "name": "title",
+    "desc": "يحدد عنوان الصفحة الذي يظهر في شريط عنوان المتصفح أو علامة التبويب.",
+    "example": "<title>عنوان الصفحة</title>"
+  },
+  {
+    "type": "html",
+    "name": "tr",
+    "desc": "صف في جدول يحتوي على خلايا `<td>` أو رؤوس خلايا `<th>`.",
+    "example": "<tr><td>خلية 1</td><td>خلية 2</td></tr>"
+  },
+  {
+    "type": "html",
+    "name": "track",
+    "desc": "يوفر مسارات نصية (مثل الترجمة أو التعليقات) لوسائط الفيديو أو الصوت.",
+    "example": "<video controls><track kind='subtitles' src='subs.vtt' srclang='ar' label='العربية'></video>"
+  },
+  {
+    "type": "html",
+    "name": "u",
+    "desc": "يعرض النص مع خط تحته، يستخدم عادة لتسليط الضوء على أجزاء معينة من النص دون دلالة معنوية خاصة.",
+    "example": "<u>نص تحته خط</u>"
+  },
+  {
+    "type": "html",
+    "name": "ul",
+    "desc": "قائمة غير مرتبة، تعرض عناصرها كنقاط أو علامات دون تسلسل رقمي.",
+    "example": "<ul><li>عنصر 1</li><li>عنصر 2</li></ul>"
+  },
+  {
+    "type": "html",
+    "name": "var",
+    "desc": "يمثل متغير برمجي أو قيمة يمكن تغييرها في البرمجة، يظهر عادة بنمط مائل.",
+    "example": "<var>x</var>"
+  },
+  {
+    "type": "html",
+    "name": "video",
+    "desc": "عنصر لتضمين وتشغيل فيديوهات داخل صفحة الويب مع أدوات تحكم مثل التشغيل، الإيقاف، ومستوى الصوت.",
+    "example": "<video controls src='movie.mp4'>متصفحك لا يدعم الفيديو.</video>"
+  },
+  {
+    "type": "html",
+    "name": "wbr",
+    "desc": "نقطة اقتراحية لفصل النص عند الحاجة لكسر السطر، تساعد في تحسين التفاف النصوص الطويلة دون كسر الكلمات في غير الأماكن المناسبة.",
+    "example": "هذاكلمة<wbr>طويلة"
+  }
+]

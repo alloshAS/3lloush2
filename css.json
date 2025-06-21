@@ -1,0 +1,338 @@
+[
+  {
+    "type": "css",
+    "name": "align-content",
+    "desc": "تحدد كيفية محاذاة المحتوى داخل الحاوية عندما يكون هناك مساحة زائدة على المحور العمودي في تخطيطات Flexbox أو Grid، وهي تتحكم بتوزيع الصفوف أو الأعمدة داخل الحاوية.",
+    "example": "align-content: center;"
+  },
+  {
+    "type": "css",
+    "name": "align-items",
+    "desc": "تحدد كيفية محاذاة العناصر الفردية داخل الحاوية على المحور العمودي في تخطيط Flexbox أو Grid، بحيث يمكن ضبط محاذاة كل عنصر بالنسبة للمحور العرضي.",
+    "example": "align-items: flex-start;"
+  },
+  {
+    "type": "css",
+    "name": "align-self",
+    "desc": "تتيح لمحاذاة عنصر معين داخل الحاوية بشكل مستقل عن باقي العناصر في Flexbox أو Grid، حيث يمكن تجاوز محاذاة العناصر الافتراضية المحددة بـ align-items.",
+    "example": "align-self: center;"
+  },
+  {
+    "type": "css",
+    "name": "all",
+    "desc": "تستخدم لإعادة تعيين أو تعيين جميع خصائص CSS على عنصر معين إلى قيمة محددة، مثل unset أو initial، لتسهيل إعادة ضبط الأنماط.",
+    "example": "all: unset;"
+  },
+  {
+    "type": "css",
+    "name": "animation",
+    "desc": "تستخدم لتطبيق حركة CSS على العنصر، وتجمع عدة خصائص الحركة مثل الاسم، المدة، التوقيت، التأخير، التكرار، إلخ، في خاصية واحدة.",
+    "example": "animation: slidein 3s ease-in-out;"
+  },
+  {
+    "type": "css",
+    "name": "animation-delay",
+    "desc": "تحدد مدة الانتظار قبل بدء تنفيذ الحركة على العنصر، مفيدة لتأخير بداية الحركة لزمن معين.",
+    "example": "animation-delay: 2s;"
+  },
+  {
+    "type": "css",
+    "name": "animation-direction",
+    "desc": "تحدد اتجاه الحركة، هل يتم تشغيلها بشكل طبيعي، معكوس، ذهابًا وإيابًا، أو العكس الذهاب والإياب.",
+    "example": "animation-direction: reverse;"
+  },
+  {
+    "type": "css",
+    "name": "animation-duration",
+    "desc": "تحدد المدة الزمنية التي تستغرقها الحركة الواحدة على العنصر، وتقبل قيم زمنية مثل ثواني أو ميلي ثانية.",
+    "example": "animation-duration: 1s;"
+  },
+  {
+    "type": "css",
+    "name": "animation-fill-mode",
+    "desc": "تحدد حالة العنصر بعد انتهاء الحركة، مثل الحفاظ على الحالة النهائية للحركة أو العودة للحالة الأصلية.",
+    "example": "animation-fill-mode: forwards;"
+  },
+  {
+    "type": "css",
+    "name": "animation-iteration-count",
+    "desc": "تحدد عدد مرات تكرار الحركة، ويمكن تعيينها لعدد معين أو infinite للتكرار اللا نهائي.",
+    "example": "animation-iteration-count: infinite;"
+  },
+  {
+    "type": "css",
+    "name": "animation-name",
+    "desc": "تحدد اسم الحركة المعرفة بواسطة @keyframes التي سيتم تطبيقها على العنصر.",
+    "example": "animation-name: fadeIn;"
+  },
+  {
+    "type": "css",
+    "name": "animation-play-state",
+    "desc": "تتحكم في تشغيل أو إيقاف مؤقت للحركة، بحيث يمكن إيقافها مؤقتًا أو استئنافها.",
+    "example": "animation-play-state: paused;"
+  },
+  {
+    "type": "css",
+    "name": "animation-timing-function",
+    "desc": "تحدد منحنى التوقيت للحركة، أي كيف تتغير سرعة الحركة مع الزمن، مثل linear أو ease-in أو ease-out.",
+    "example": "animation-timing-function: ease-in;"
+  },
+  {
+    "type": "css",
+    "name": "aspect-ratio",
+    "desc": "تحدد نسبة العرض إلى الارتفاع للعنصر، مما يساعد في الحفاظ على تناسق الأبعاد بغض النظر عن الحجم الفعلي.",
+    "example": "aspect-ratio: 16 / 9;"
+  },
+  {
+    "type": "css",
+    "name": "backdrop-filter",
+    "desc": "تطبق تأثيرات بصرية مثل الضبابية أو التباين على خلفية العنصر أو المناطق خلفه، تُستخدم لإنشاء تأثيرات مثل التمويه الشفاف.",
+    "example": "backdrop-filter: blur(5px);"
+  },
+  {
+    "type": "css",
+    "name": "background",
+    "desc": "خاصية شاملة لتحديد خلفية العنصر، يمكن تضمين اللون، الصورة، التكرار، الموضع، الحجم، وغيرها معًا في خاصية واحدة.",
+    "example": "background: #fff url('img.png') no-repeat;"
+  },
+  {
+    "type": "css",
+    "name": "background-attachment",
+    "desc": "تحدد كيفية تمرير الخلفية عند التمرير، هل تبقى ثابتة أو تتحرك مع المحتوى.",
+    "example": "background-attachment: fixed;"
+  },
+  {
+    "type": "css",
+    "name": "background-blend-mode",
+    "desc": "تحدد طريقة دمج لون الخلفية مع الصور أو الطبقات الأخرى، مثل multiply أو screen، لتأثيرات ألوان معقدة.",
+    "example": "background-blend-mode: multiply;"
+  },
+  {
+    "type": "css",
+    "name": "background-clip",
+    "desc": "تحدد أين يتم رسم الخلفية داخل العنصر، هل في حدود المحتوى، الحشو، أو الحدود.",
+    "example": "background-clip: padding-box;"
+  },
+  {
+    "type": "css",
+    "name": "background-color",
+    "desc": "تحدد لون الخلفية للعنصر، وهو اللون الذي يظهر خلف المحتوى.",
+    "example": "background-color: #f0f0f0;"
+  },
+  {
+    "type": "css",
+    "name": "background-image",
+    "desc": "تحدد صورة الخلفية التي تظهر خلف محتوى العنصر.",
+    "example": "background-image: url('bg.jpg');"
+  },
+  {
+    "type": "css",
+    "name": "background-origin",
+    "desc": "تحدد أصل تموضع الخلفية، هل داخل حدود المحتوى أو الحشو أو الحدود.",
+    "example": "background-origin: border-box;"
+  },
+  {
+    "type": "css",
+    "name": "background-position",
+    "desc": "تحدد موضع صورة الخلفية داخل العنصر، مثل center أو top left.",
+    "example": "background-position: center;"
+  },
+  {
+    "type": "css",
+    "name": "background-repeat",
+    "desc": "تحدد إذا كانت صورة الخلفية ستتكرر أو لا، وكيف تتكرر أفقيًا وعموديًا.",
+    "example": "background-repeat: no-repeat;"
+  },
+  {
+    "type": "css",
+    "name": "background-size",
+    "desc": "تحدد حجم صورة الخلفية، هل تغطي كامل العنصر أو تناسب المحتوى أو حجم معين.",
+    "example": "background-size: cover;"
+  },
+  {
+    "type": "css",
+    "name": "border",
+    "desc": "تحدد إطارًا حول العنصر، يمكن تعيين العرض، النوع (مثل solid، dashed) واللون.",
+    "example": "border: 1px solid black;"
+  },
+  {
+    "type": "css",
+    "name": "border-block",
+    "desc": "تحدد حدود على المحور العمودي في اللغة التي تكتب من اليمين لليسار أو العكس (كتابة من أعلى إلى أسفل أو العكس).",
+    "example": "border-block: 2px solid blue;"
+  },
+  {
+    "type": "css",
+    "name": "border-bottom",
+    "desc": "تحدد الحد السفلي للعنصر، يمكن التحكم بسماكته، لونه ونمطه.",
+    "example": "border-bottom: 1px dashed red;"
+  },
+  {
+    "type": "css",
+    "name": "border-color",
+    "desc": "تحدد لون الحدود لكل جوانب العنصر أو لكل جانب على حدة.",
+    "example": "border-color: green;"
+  },
+  {
+    "type": "css",
+    "name": "border-image",
+    "desc": "تستخدم صورة كحد للعنصر بدلاً من الخطوط التقليدية، ويمكن التحكم في كيفية تمديد الصورة أو تكرارها.",
+    "example": "border-image: url(border.png) 30 round;"
+  },
+  {
+    "type": "css",
+    "name": "border-radius",
+    "desc": "تحدد مدى تدوير زوايا العنصر، بحيث يمكن إنشاء زوايا دائرية أو مستديرة.",
+    "example": "border-radius: 10px;"
+  },
+  {
+  "type": "css",
+  "name": "border-style",
+  "desc": "تحدد نمط الخط المستخدم لحدود العنصر. يمكن أن يكون الخط متصل، منقط، متقطع، مزدوج، أو تأثيرات ثلاثية الأبعاد مثل groove وridge. كما يمكن استخدام none لإزالة الحدود. يمكن تطبيق نمط مختلف لكل جانب من جوانب العنصر.",
+  "example": "border-style: solid; /* خط متصل */\nborder-style: dotted; /* نقاط منقطة */\nborder-style: dashed; /* خط متقطع */\nborder-style: double; /* خط مزدوج */\nborder-style: none; /* بدون حدود */"
+},
+  {
+    "type": "css",
+    "name": "border-width",
+    "desc": "تحدد سمك حدود العنصر، يمكن أن تكون قيمة ثابتة مثل بكسل أو كلمات مفتاحية مثل thin, medium, thick.",
+    "example": "border-width: 2px;"
+  },
+  {
+    "type": "css",
+    "name": "bottom",
+    "desc": "تحدد المسافة بين أسفل العنصر والحافة السفلى للحاوية عند استخدام مواضع relative أو absolute أو fixed.",
+    "example": "bottom: 10px;"
+  },
+  {
+    "type": "css",
+    "name": "box-decoration-break",
+    "desc": "تحدد كيف يتم تطبيق خصائص تزيين الصندوق (مثل الخلفية والحدود) عند تقطيع النص أو العنصر عبر الأسطر.",
+    "example": "box-decoration-break: clone;"
+  },
+  {
+    "type": "css",
+    "name": "box-shadow",
+    "desc": "تضيف ظلًا للعنصر مع إمكانية التحكم بالاتجاه، التمويه، واللون، مما يعطي عمقًا وتأثيرًا ثلاثي الأبعاد.",
+    "example": "box-shadow: 0 4px 8px rgba(0,0,0,0.3);"
+  },
+  {
+    "type": "css",
+    "name": "box-sizing",
+    "desc": "تحدد كيفية حساب عرض وارتفاع العنصر، هل يشمل الحدود والحشو أم لا. القيمة border-box تجعل الحجم يشمل الحدود والحشو.",
+    "example": "box-sizing: border-box;"
+  },
+  {
+    "type": "css",
+    "name": "break-after",
+    "desc": "تحدد سلوك كسر الصفحة بعد العنصر في الطباعة أو العرض على صفحات متعددة، مثل always لكسر الصفحة دائمًا بعد العنصر.",
+    "example": "break-after: always;"
+  },
+  {
+    "type": "css",
+    "name": "break-before",
+    "desc": "تحدد سلوك كسر الصفحة قبل العنصر، مثل auto أو always، لتنسيق الطباعة أو تخطيط الصفحة.",
+    "example": "break-before: auto;"
+  },
+  {
+    "type": "css",
+    "name": "break-inside",
+    "desc": "تحدد إذا كان يمكن كسر الصفحة داخل العنصر أم لا، مثل avoid لمنع الكسر داخل العنصر.",
+    "example": "break-inside: avoid;"
+  },
+  {
+    "type": "css",
+    "name": "caption-side",
+    "desc": "تحدد موقع عنوان الجدول (caption) سواء في الأعلى أو الأسفل.",
+    "example": "caption-side: top;"
+  },
+  {
+    "type": "css",
+    "name": "caret-color",
+    "desc": "تحدد لون مؤشر النص (المؤشر الومضي) داخل حقول الإدخال أو العناصر القابلة للتحرير.",
+    "example": "caret-color: red;"
+  },
+  {
+    "type": "css",
+    "name": "clear",
+    "desc": "تستخدم لمنع الالتفاف حول العناصر العائمة (float) بحيث يبدأ العنصر الجديد بعد العناصر العائمة.",
+    "example": "clear: both;"
+  },
+  {
+    "type": "css",
+    "name": "clip-path",
+    "desc": "تحدد شكل القص للعنصر بحيث يتم عرض جزء فقط منه حسب الشكل المحدد مثل دائرة أو مضلع.",
+    "example": "clip-path: circle(50% at 50% 50%);"
+  },
+  {
+    "type": "css",
+    "name": "color",
+    "desc": "تحدد لون النص داخل العنصر.",
+    "example": "color: blue;"
+  },
+  {
+    "type": "css",
+    "name": "column-count",
+    "desc": "تحدد عدد الأعمدة في تخطيط الأعمدة المتعددة (multi-column layout).",
+    "example": "column-count: 3;"
+  },
+  {
+    "type": "css",
+    "name": "column-gap",
+    "desc": "تحدد المسافة الفاصلة بين الأعمدة في التخطيط متعدد الأعمدة.",
+    "example": "column-gap: 20px;"
+  },
+  {
+    "type": "css",
+    "name": "columns",
+    "desc": "اختصار يحدد عدد الأعمدة وعرض العمود في تخطيط متعدد الأعمدة.",
+    "example": "columns: 3 200px;"
+  },
+  {
+    "type": "css",
+    "name": "contain",
+    "desc": "تحسين الأداء عن طريق عزل العنصر وتحديد تأثيره على التخطيط والأنماط، مما يقلل إعادة الحساب والتصميم.",
+    "example": "contain: layout style;"
+  },
+  {
+    "type": "css",
+    "name": "content",
+    "desc": "تستخدم لإضافة محتوى نصي أو صور في عناصر pseudo مثل ::before و ::after.",
+    "example": "content: 'نص';"
+  },
+  {
+    "type": "css",
+    "name": "counter-increment",
+    "desc": "تزيد عدادًا معرفًا يمكن استخدامه في CSS لإنشاء أرقام تلقائية مثل ترقيم الفقرات.",
+    "example": "counter-increment: section;"
+  },
+  {
+    "type": "css",
+    "name": "counter-reset",
+    "desc": "تعيد تعيين قيمة عداد معين إلى الصفر أو قيمة أخرى.",
+    "example": "counter-reset: section;"
+  },
+  {
+    "type": "css",
+    "name": "cursor",
+    "desc": "تحدد شكل مؤشر الفأرة عند المرور فوق العنصر، مثل pointer أو default أو wait.",
+    "example": "cursor: pointer;"
+  },
+  {
+    "type": "css",
+    "name": "direction",
+    "desc": "تحدد اتجاه النص في العنصر، سواء من اليسار إلى اليمين (ltr) أو من اليمين إلى اليسار (rtl).",
+    "example": "direction: rtl;"
+  },
+  {
+    "type": "css",
+    "name": "display",
+    "desc": "تحدد نوع عرض العنصر في الصفحة، مثل block, inline, flex, grid, none.",
+    "example": "display: grid;"
+  },
+  {
+    "type": "css",
+    "name": "empty-cells",
+    "desc": "تحدد ما إذا كانت خلايا الجدول الفارغة تظهر أم لا.",
+    "example": "empty-cells: hide;"
+  }
+]
